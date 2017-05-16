@@ -1,5 +1,5 @@
 # vsum_dsf
-The implementation of the paper "Video Summarization using Deep Semantic Features" in ACCV'16
+The implementation of the paper "Video Summarization using Deep Semantic Features" in ACCV'16 [[arXiv](arxiv.org/abs/1609.08758)]
 
 ## How to set it up
 
@@ -44,7 +44,7 @@ You can download the dataset as:
 
 ## Example
 
-See the notebook or:
+See the [notebook](https://github.com/mayu-ot/vsum_dsf/blob/master/Demo.ipynb) or:
 
 	python script/summarize.py
 	python script/evaluate.py results/summe/smt_feat
