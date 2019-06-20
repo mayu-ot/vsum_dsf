@@ -19,7 +19,7 @@ class VSUM(gm_submodular.DataElement):
 
         # budget 15% of orig
         self.budget = int(0.15 * self.dataset.data['length'] / seg_l)
-        print 'budget: ', self.budget
+        print('budget: ', self.budget)
 
         # embed video segments
         seg_feat = encodeSeg(self.dataset, model, seg_size=seg_l)

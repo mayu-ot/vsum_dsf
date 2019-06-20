@@ -9,7 +9,7 @@ class SUMME():
     def __init__(self, video_id, feat_type='vgg'):
 
         dataset = json.load(open(datasetRoot + 'dataset.json'))
-        print 'load ' + video_id
+        print('load ' + video_id)
         data = filter(lambda x: x['videoID'] == video_id, dataset)
         self.data = data[0]
         self.feat = np.load(datasetRoot + 'feat/' + feat_type +

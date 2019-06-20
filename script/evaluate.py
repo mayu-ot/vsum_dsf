@@ -87,14 +87,14 @@ if __name__ == '__main__':
     res = eval_summary_(dataset_name, res_base, gt_base)
     hum_min, hum_avr, hum_max = eval_human_summary(dataset_name, gt_base)
 
-    print header
+    print(header)
     for k in res:
-        print entry.format(k, hum_min[k], hum_avr[k], hum_max[k], res[k])
+        print(entry.format(k, hum_min[k], hum_avr[k], hum_max[k], res[k]))
 
     score_mean = [sum(r.values()) / len(r)
                   for r in [hum_min, hum_avr, hum_max, res]]
 
-    print '|' + '-' * 82 + '|'
-    print res_sum_mean.format(*score_mean)
-    print res_sum_rel_to_avr.format(*map(lambda x: x / score_mean[1], score_mean))
-    print res_sum_rel_to_max.format(*map(lambda x: x / score_mean[2], score_mean))
+    print('|' + '-' * 82 + '|')
+    print(res_sum_mean.format(*score_mean))
+    print(res_sum_rel_to_avr.format(*map(lambda x: x / score_mean[1], score_mean)))
+    print(res_sum_rel_to_max.format(*map(lambda x: x / score_mean[2], score_mean)))
