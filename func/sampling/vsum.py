@@ -5,6 +5,7 @@ from gm_submodular import leskovec_maximize
 from func.dataset.summe import SUMME
 import numpy as np
 import scipy.spatial.distance as dist
+from functools import *
 
 
 class VSUM(gm_submodular.DataElement):
