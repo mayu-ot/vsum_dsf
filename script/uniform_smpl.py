@@ -2,7 +2,7 @@ import numpy as np
 
 
 def uniform_sampling(data, out_dir, vid_id, total_l=0.15, seg_l=5):
-    print vid_id
+    print(vid_id)
     v_id = data['videoID']
     fps = data['fps']
     length = data['length']  # length in sec.
