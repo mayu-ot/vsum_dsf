@@ -40,7 +40,7 @@ if __name__ == '__main__':
     d_name = args.dname
     dataset_root = 'data/{}/'.format(d_name)
     out_dir = 'results/{:}/{:}/'.format(d_name, feat_type)
-    print 'save to: ', out_dir
+    print('save to: ', out_dir)
 
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
