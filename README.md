@@ -2,8 +2,7 @@
 
 ## How to set it up
 
-	git clone https://github.com/prateeksarangi.git
-
+	git clone https://github.com/prateeksarangi/vsum_dsf.git
 ### Install dependency
 
 You can install required python packages using conda:
