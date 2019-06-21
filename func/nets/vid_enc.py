@@ -20,6 +20,9 @@ class Model(Chain):
             fc_v2=L.Linear(1000, 300),
         )
 
+        net = models.resnet18()
+        net.fc = nn.Linear(512, 25)
+
     def __call__(self, x_seg):
         '''
         input: np.array(5xN, 4096)
