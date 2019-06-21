@@ -29,7 +29,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dname', '-d', type=str, default='summe',
                         help='dataset name')
-    parser.add_argument('--feat_type', '-f', type=str, default='smt_feat',
+    parser.add_argument('--feat_type', '-f', type=str, default='vgg',
                         help='feat_type: smt_feat or vgg')
     args = parser.parse_args()
 
@@ -55,7 +55,7 @@ if __name__ == '__main__':
         model = vid_enc.Model()
         serializers.load_npz('data/trained_model/model_par', model)
     elif feat_type == 'vgg':
-        from func.nets.Seg_vgg19 import Model
+        from func.nets.vid_enc_vgg19 import Model
         model = Model()
     else:
         raise RuntimeError('[invalid feat_type] use smt_feat or vgg')
