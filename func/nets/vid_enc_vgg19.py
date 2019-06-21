@@ -13,4 +13,4 @@ class Model(Chain):
         '''
         b_size = self.b_size['video']
         out_size = x_seg.shape[1]
-        return F.sum(F.reshape(x_seg, (x_seg.shape[0] / b_size, b_size, out_size)), axis=1) / b_size
+        return F.sum(F.reshape(x_seg, (int(x_seg.shape[0] / b_size), b_size, out_size)), axis=1) / b_size
