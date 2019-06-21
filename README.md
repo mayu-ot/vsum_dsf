@@ -25,7 +25,7 @@ You can set it up by:
 	cd vsum_dsf
 	git clone https://github.com/prateeksarangi/gm_submodular.git
 	cd gm_submodular
-	python setup.py install --user
+	python3 setup.py install --user
 
 [1] Gygli, Grabner & Van Gool. Video Summarization by Learning Submodular Mixtures of Objectives. CVPR 2015.
 
@@ -45,5 +45,5 @@ You can download the dataset as:
 
 See the [notebook](https://github.com/mayu-ot/vsum_dsf/blob/master/Demo.ipynb) or:
 
-	python script/summarize.py
-	python script/evaluate.py results/summe/smt_feat
+	python3 script/summarize.py
+	python3 script/evaluate.py results/summe/smt_feat
