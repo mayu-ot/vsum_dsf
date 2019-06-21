@@ -27,5 +27,5 @@ class Model(Chain):
         with cuda.get_device(x_seg.data):
             y0 = F.tanh(self.fc_v1(x_seg))
             y1 = F.tanh(self.fc_v2(y0))
-            h = F.reshape(y1, (y1.shape[0] / b_size, b_size, 300))
+            h = F.reshape(y1, (int(y1.shape[0] / b_size), b_size, 300))
             return F.sum(h, axis=1) / b_size
