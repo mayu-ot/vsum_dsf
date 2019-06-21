@@ -1,6 +1,7 @@
 import chainer.links as L
 import chainer.functions as F
 from chainer import cuda, serializers, Chain, Variable
+import torch.nn as nn
 from os.path import dirname
 import json
 import numpy as np
