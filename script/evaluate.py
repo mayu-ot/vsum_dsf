@@ -17,7 +17,7 @@ res_sum_rel_to_max = '|   relative to best.human|{:^12.4}|{:^12.4}|{:^12.4}|{:^1
 def eval_f1(pred_summary, gt_sumamry):
     pred_summary = (pred_summary > 0).astype(np.int)
     gt_sumamry = (gt_sumamry > 0).astype(np.int)
-    f1 = map(lambda y_true: f1_score(y_true, pred_summary), gt_sumamry)
+    f1 = list(map(lambda y_true: f1_score(y_true, pred_summary), gt_sumamry))
     return sum(f1) / len(f1)
 
 
