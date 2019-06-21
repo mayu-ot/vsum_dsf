@@ -5,7 +5,7 @@ from gm_submodular import leskovec_maximize
 from func.dataset.summe import SUMME
 import numpy as np
 import scipy.spatial.distance as dist
-from functools import *
+from functools import reduce
 
 
 class VSUM(gm_submodular.DataElement):
@@ -34,6 +34,7 @@ class VSUM(gm_submodular.DataElement):
 
         # compute chronological distance
         self.frame, img_id, self.score = self.dataset.sampleFrame()
+
 
         fno_arr = np.expand_dims(np.array(img_id), axis=1)
         self.dist_c = dist.pdist(fno_arr, 'sqeuclidean')
