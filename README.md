@@ -1,9 +1,8 @@
 # vsum_dsf
-The implementation of the paper "Video Summarization using Deep Semantic Features" in ACCV'16 [[arXiv](arxiv.org/abs/1609.08758)]
 
 ## How to set it up
 
-	git clone https://github.com/mayu-ot/vsum_dsf.git
+	git clone https://github.com/prateeksarangi.git
 
 ### Install dependency
 
@@ -24,7 +23,7 @@ This code utilizes tools provided by M. Gygli *et al.* [1].
 You can set it up by:
 
 	cd vsum_dsf
-	git clone https://github.com/gyglim/gm_submodular.git
+	git clone https://github.com/prateeksarangi/gm_submodular.git
 	cd gm_submodular
 	python setup.py install --user
 
