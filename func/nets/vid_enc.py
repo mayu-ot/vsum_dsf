@@ -14,10 +14,7 @@ class Model(Chain):
     def __init__(self, b_size={'video': 5}):
         self.b_size = b_size
 
-        super(Model, self).__init__(
-            fc_v1=L.Linear(4096, 1000),
-            fc_v2=L.Linear(1000, 300),
-        )
+
 
     def __call__(self, x_seg):
         '''
