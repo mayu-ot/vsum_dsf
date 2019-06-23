@@ -53,7 +53,7 @@ if __name__ == '__main__':
     ##########################################################################
     if feat_type == 'smt_feat':
         model = vid_enc.Model()
-        serializers.load_npz('data/trained_model/model_par', model)
+        #serializers.load_npz('data/trained_model/model_par', model)
     elif feat_type == 'vgg':
         from func.nets.vid_enc_vgg19 import Model
         model = Model()
