@@ -15,8 +15,11 @@ class Model(Chain):
         self.b_size = b_size
 
         super(Model, self).__init__(
-            fc_v1=L.Linear(4096, 1000),
-            fc_v2=L.Linear(1000, 300),
+            conv2=L.ConvolutionND(3, 1, 20, 5),
+            conv3=L.ConvolutionND(3, 20, 20, 5),
+            fc1=L.Linear(4096, 1300),
+            fc4=L.Linear(1300, 1300),
+            fc5=L.Linear(1300, 300),
         )
 
     def __call__(self, x_seg):
@@ -25,7 +28,10 @@ class Model(Chain):
         '''
         b_size = self.b_size['video']
         with cuda.get_device(x_seg.data):
-            y0 = F.tanh(self.fc_v1(x_seg))
-            y1 = F.dropout(F.relu(self.fc_v2(y0)))
-            h = F.reshape(y1, (int(y1.shape[0] / b_size), b_size, 300))
+            y0 = F.tanh(self.fc1(x_seg))
+            y1 = F.tanh(self.fc4(y0))
+            y2 = F.tanh(self.fc5(y1))
+            h = F.dropout(F.relu(self.fc1(y2)))
+            h = self.fc4(h)
+            h = F.reshape(h, (int(h.shape[0] / b_size), b_size, 300))
             return F.sum(h, axis=1) / b_size
