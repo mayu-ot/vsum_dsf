@@ -29,7 +29,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dname', '-d', type=str, default='summe',
                         help='dataset name')
-    parser.add_argument('--feat_type', '-f', type=str, default='vgg',
+    parser.add_argument('--feat_type', '-f', type=str, default='smt_feat',
                         help='feat_type: smt_feat or vgg')
     args = parser.parse_args()
 
